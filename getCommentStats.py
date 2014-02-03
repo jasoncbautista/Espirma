@@ -27,9 +27,7 @@ commentDesnity=    float(commentCount) / float(loc)
 
 
 print "{ "
-print "'fileName': '"
-print fileName
-print "'"
+print "'fileName': '" + fileName + "'"
 print ", 'loc': "
 print loc
 
