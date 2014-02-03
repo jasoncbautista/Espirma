@@ -28,6 +28,7 @@ jsFilePaths = jsFilePathsStr.split("\n")
 
 print "var commentStats = {"
 for path in jsFilePaths:
-    jsonResult = os.popen("./getCommentsStats  " + path  ).read()
-    print jsonResult
+    if ".js" in path:
+        jsonResult = os.popen("./getCommentStats.py  " + path  ).read()
+        print jsonResult
 print "};"
