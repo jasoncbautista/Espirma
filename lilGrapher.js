@@ -24,7 +24,6 @@ $(document).ready(function(){
             return;
         }
 
-
         if ( stat.commentDensity < 0.30) {
             bar.css({
                 background: "yellow"
@@ -37,6 +36,23 @@ $(document).ready(function(){
             });
         }
 
+        var titleArea  = $("#currentInfoTitle");
+        var rawStats = $("#rawStats");
+
+        var prettyPrintJSONToDOM = function(json, domParent){
+            _.each(json, function(value, key){
+                var currDom = $("<div><b>" + key + ":</b> " +  value + "</div>"); domParent.append(currDom);
+            });
+        };
+        bar.mouseover(function(){
+            // First we add simple info like title name
+            titleArea.html(stat.fileName);
+            // rawStats.html(JSON.stringify(stat));
+
+            rawStats.empty();
+            prettyPrintJSONToDOM( stat, rawStats);
+
+        });
 
 
     };
