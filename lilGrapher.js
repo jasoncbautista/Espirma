@@ -7,7 +7,7 @@ $(document).ready(function(){
         console.log(stat);
 
         var bar = $("<div class='barGraph'>  </div>");
-        var height = stat.commentDensity * 300 + 10;
+        var height = stat.commentDensity * 300 + 2;
         bar.css({
             height:  height + "px"
         });
@@ -25,7 +25,7 @@ $(document).ready(function(){
         }
         if ( stat.commentDensity >= 0.50) {
             bar.css({
-                background: "rgb(92, 255, 92)"
+                background: "rgb(92, 255, 92)" // super green
             });
         }
 
@@ -33,7 +33,7 @@ $(document).ready(function(){
 
         if ( stat.commentDensity < 0.30) {
             bar.css({
-                background: "yellow"
+                background: " rgb(233, 216, 25)" // yellow
             });
         }
 
