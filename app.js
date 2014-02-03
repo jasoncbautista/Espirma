@@ -27,7 +27,7 @@ var countComments = function(analyzedResults){
 
 
         var lines = (endLine - startLine) + 1;
-        cosnole.log(lines);
+        console.log(lines);
     }
 
     return count;
