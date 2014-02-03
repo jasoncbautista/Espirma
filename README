@@ -1,0 +1,15 @@
+
+Tools:
+
+espirma
+
+Steps:
+
+
+- copy file
+- remove blank lines
+- count # of lines
+- run espirma and get json 
+- count comments from file
+
+
