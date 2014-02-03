@@ -23,7 +23,10 @@ commentCount= os.popen("node getCommentCount.js " + fileName).read()
 actualCodeCount =  int(loc) - int(commentCount)
 
 
-commentDesnity=    float(commentCount) / float(loc)
+if float(loc) == 0:
+    commentDensity = 0
+else:
+    commentDensity =    float(commentCount) / float(loc)
 
 
 print "{ "
@@ -39,7 +42,7 @@ print commentCount
 
 print ", 'commentDensity': "
 
-print commentDesnity
+print commentDensity
 
 print "} "
 
