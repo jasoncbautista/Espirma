@@ -1,2 +1,2 @@
-./generateAllStats.py moreJS/ > stats.js 
+./generateAllStats.py src/ > stats.js 
 

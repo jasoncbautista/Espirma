@@ -7,7 +7,7 @@ $(document).ready(function(){
         console.log(stat);
 
         var bar = $("<div class='barGraph'>  </div>");
-        var height = stat.commentDensity * 300;
+        var height = stat.commentDensity * 300 + 10;
         bar.css({
             height:  height + "px"
         });
