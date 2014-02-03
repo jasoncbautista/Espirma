@@ -17,5 +17,7 @@ print fileName
 
 
 loc = os.popen("./findLinesInFile.sh " + fileName).read()
+commentCount= os.popen("node getCommentCount.js " + fileName).read()
 
 print loc
+print commentCount
