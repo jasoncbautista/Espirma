@@ -7,7 +7,16 @@ var esprima = require('esprima');
 
 // Read a file:
 var filename = process.argv[2];
+console.log(filename);
 var code = fs.readFileSync(filename);
 
-var jsonResult = esprima.parse(code);
-console.log(JSON.stringify(jsonResult);
+fs.readFile(filename, 'utf8', function (err, code) {
+      if (err) {
+              return console.log(err);
+      }
+
+    console.log(code);
+    var jsonResult = esprima.parse(code);
+    console.log(JSON.stringify(jsonResult));
+});
+// console.log(jsonResult);

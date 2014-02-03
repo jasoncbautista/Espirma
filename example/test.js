@@ -30,7 +30,4 @@ var anotherFunc = function(one, two){
 
 
 
-
-
-
-});
+};
