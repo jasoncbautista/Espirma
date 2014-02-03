@@ -27,12 +27,11 @@ var countComments = function(analyzedResults){
 
 
         var lines = (endLine - startLine) + 1;
-        console.log(lines);
         lineCount+=lines;
 
     }
 
-    return count;
+    return lineCount;
 };
 
 
