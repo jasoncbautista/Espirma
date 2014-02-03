@@ -37,7 +37,7 @@ print actualCodeCount
 print ", 'commentCount': "
 print commentCount
 
-print ", 'commentDesnity': "
+print ", 'commentDensity': "
 
 print commentDesnity
 

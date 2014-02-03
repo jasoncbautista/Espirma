@@ -9,7 +9,7 @@ var commentStats = [
 , 'commentCount': 
 31
 
-, 'commentDesnity': 
+, 'commentDensity': 
 0.352272727273
 } 
 
@@ -24,7 +24,7 @@ var commentStats = [
 , 'commentCount': 
 10
 
-, 'commentDesnity': 
+, 'commentDensity': 
 0.112359550562
 } 
 
@@ -39,7 +39,7 @@ var commentStats = [
 , 'commentCount': 
 13
 
-, 'commentDesnity': 
+, 'commentDensity': 
 0.111111111111
 } 
 
@@ -54,7 +54,7 @@ var commentStats = [
 , 'commentCount': 
 16
 
-, 'commentDesnity': 
+, 'commentDensity': 
 0.262295081967
 } 
 
