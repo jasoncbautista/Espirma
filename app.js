@@ -9,7 +9,32 @@ var code = fs.readFileSync(filename);
 
 var jsonResult = esprima.parse(code, {
     comment: true
+    , loc: true
 });
 
-console.log(jsonResult);
+//console.log(jsonResult);
+
+var countComments = function(analyzedResults){
+    var count = 0;
+    var comments = analyzedResults.comments;
+    for(var ii = 0; ii< comments.length; ii++){
+
+        var comment = comments[ii];
+        var loc = comment.loc;
+        console.log(loc);
+        var startLine = loc.start.line
+        var endLine = loc.end.line;
+
+
+        var lines = (endLine - startLine) + 1;
+        cosnole.log(lines);
+    }
+
+    return count;
+};
+
+
+var loc = countComments(jsonResult);
+
+
 //console.log(JSON.stringify(jsonResult));
