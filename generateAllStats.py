@@ -26,9 +26,15 @@ jsFilePaths = jsFilePathsStr.split("\n")
 # Here we write a little .js file with our stats
 
 
-print "var commentStats = {"
+print "var commentStats = ["
+count = 0
 for path in jsFilePaths:
+
     if ".js" in path:
+
+        if count > 0:
+            print ", "
         jsonResult = os.popen("./getCommentStats.py  " + path  ).read()
         print jsonResult
-print "};"
+        count+=1
+print "];"
