@@ -15,26 +15,30 @@ var jsonResult = esprima.parse(code, {
 //console.log(jsonResult);
 
 var countComments = function(analyzedResults){
-    var count = 0;
+    var lineCount = 0;
     var comments = analyzedResults.comments;
+
     for(var ii = 0; ii< comments.length; ii++){
 
         var comment = comments[ii];
         var loc = comment.loc;
-        console.log(loc);
         var startLine = loc.start.line
         var endLine = loc.end.line;
 
 
         var lines = (endLine - startLine) + 1;
         console.log(lines);
+        lineCount+=lines;
+
     }
 
     return count;
 };
 
 
-var loc = countComments(jsonResult);
+var commentsLines = countComments(jsonResult);
+console.log(commentsLines);
+
 
 
 //console.log(JSON.stringify(jsonResult));
