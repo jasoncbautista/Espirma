@@ -23,6 +23,13 @@ $(document).ready(function(){
             });
             return;
         }
+        if ( stat.commentDensity >= 0.50) {
+            bar.css({
+                background: "rgb(92, 255, 92)"
+            });
+        }
+
+
 
         if ( stat.commentDensity < 0.30) {
             bar.css({
@@ -44,13 +51,17 @@ $(document).ready(function(){
                 var currDom = $("<div><b>" + key + ":</b> " +  value + "</div>"); domParent.append(currDom);
             });
         };
+
+        var densityDom  = $("#bigDensity");
         bar.mouseover(function(){
             // First we add simple info like title name
             titleArea.html(stat.fileName);
             // rawStats.html(JSON.stringify(stat));
-
             rawStats.empty();
             prettyPrintJSONToDOM( stat, rawStats);
+
+            var commentPercent = Math.floor(stat.commentDensity * 100);
+            densityDom.html(commentPercent + "%");
 
         });
 
